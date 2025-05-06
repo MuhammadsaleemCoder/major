@@ -1,0 +1,45 @@
+<%- layout("/layout/biolet.ejs")%>
+<div class="row">
+    <div class="col-8 offset-2">
+        <br>
+      <h1>Add New List</h1>
+    <form method="POST" action="/listing" class="needs-validation"  novalidate  >
+        <div class="mb-3">
+            <label for="title" class="form-label" >title</label>
+            <input type="text" name="listing[title]" placeholder="Enter Title" class="form-control" required>
+            <div class="valid-feedback">title looks good</div>
+            <div class="invalid-feedback">Write title</div>
+        </div>
+       
+        <div class="mb-3">
+            <label for="description" class="form-label">description</label>
+            <textarea type="text"  name="listing[description]" placeholder="Write description" class="form-control" required></textarea>
+            <div class="invalid-feedback">make short description</div>
+        </div >
+        <div class="mb-3">
+           <label for="image" class="form-label">Image URL</label>
+            <input type="text" required name="listing[image]" placeholder="image URL/Link" class="form-control">
+            <div class="invalid-feedback">Enter a valid link</div>
+        </div>
+        <div class="row ">
+            <div class="mb-3 col-md-4">
+                <label for="Price" class="form-label">Price</label>
+                <input name="listing[price]" placeholder="Enter Price" class="form-control" required>
+                <div class="invalid-feedback">price should positive</div>
+            </div>
+            <div class="mb-3 col-md-8">
+                <label for="location" class="form-label">location</label>
+                <input type="text" name="listing[location]" placeholder="Enter Location" class="form-control" required>
+                <div class="invalid-feedback">Enter correct location</div>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="Country" class="form-label">counrtry</label>
+            <input type="text" name="listing[country]" placeholder="Enter country" class="form-control" required>
+            <div class="invalid-feedback">Select include country</div>
+        </div>
+            <button class="btn btn-dark add-btn">Add</button>
+      </form>
+    </div>
+</div>
+  

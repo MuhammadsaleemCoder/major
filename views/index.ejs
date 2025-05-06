@@ -1,0 +1,23 @@
+<%- layout("/layout/biolet.ejs")%>
+
+<h1>All Listing</h1>
+<div class="row row-cols-lg-3 row-cols-lg-2 row-cols-lg-1" >
+    
+    <!-- <form action="/listing/new" method="GET"><button>Create New listing</button></form> -->
+    <%  for(list of alllisting){  %>
+    <a href="/listing/<%= list.id %>" class="listing-link"> 
+    <div class="card listing-card" >
+        
+        <img src="<%= list.image %>" class="card-img-top" alt="listing_image" style="height: 20rem;"> 
+        <div class="card-img-overlay"></div>
+        <div class="card-body">
+          <p class="card-text">
+           <b> <%= list.title %> </b><br>
+           Rs: <%= list.price %>  
+          </p>
+        </div>
+      </div>
+      <%  } %>
+    </a>
+   </div>
+  
