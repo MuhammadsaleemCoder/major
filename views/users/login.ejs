@@ -1,0 +1,24 @@
+<%- layout("/layout/biolet.ejs")%>
+
+
+<div class="row">
+    <h4 class="col-6 offset-3 mt-4">Login</h4>
+    <div class="col-6 offset-3">
+            <form action="/login" method="POST" class="needs-validation mt-2" novalidate>
+                <div class="mb-3">
+                    <label for="username" class="form-label" >username</label>
+                    <input type="text" name="username"  class="form-control" required  id="username">
+                 
+                    <!-- <div class="invalid-feedback">Write title</div> -->
+                </div>
+
+                <div class="mb-3">
+                    <label for="password" class="form-label" >Password</label>
+                    <input type="password" name="password"  class="form-control" required  id="password">
+
+                    <!-- <div class="invalid-feedback">Write title</div> -->
+                </div>
+                <button class="btn btn-success">Login</button>
+            </form>
+        </div>
+     </div>
